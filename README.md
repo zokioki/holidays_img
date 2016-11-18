@@ -1,4 +1,4 @@
-# HolidaysImg
+# holidays_img
 
 This gem is a wrapper for the `image_tag` helper, equipped with the power of the `holidays` gem, allowing you to easily load different images based on the date.
 
@@ -20,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Simply use the `holidays_image_tag` as you would a standard Rails `image_tag`.
 
 ## Contributing
 
