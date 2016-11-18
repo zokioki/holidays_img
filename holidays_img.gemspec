@@ -6,7 +6,7 @@ require 'holidays_img/version'
 Gem::Specification.new do |spec|
   spec.name          = 'holidays_img'
   spec.version       = HolidaysImg::VERSION
-  spec.authors       = ['Zoran']
+  spec.authors       = ['Zoran Pesic']
   spec.email         = ['zoran1991@gmail.com']
 
   spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
@@ -20,6 +20,10 @@ Gem::Specification.new do |spec|
   spec.bindir        = 'exe'
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
+
+  spec.required_ruby_version = '>= 2.0.0'
+
+  spec.add_runtime_dependency 'holidays', '~> 5.0'
 
   spec.add_development_dependency 'bundler', '~> 1.13'
   spec.add_development_dependency 'rake', '~> 10.0'
