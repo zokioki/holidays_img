@@ -1,10 +1,12 @@
 # holidays_img
 
+[![Gem Version](https://badge.fury.io/rb/holidays_img.svg)](https://badge.fury.io/rb/holidays_img)
+
 This gem is a simple wrapper for Rails's `image_tag` helper. Leveraging the `holidays` gem, it allows you to easily load images based on the holiday occurring on any given date.
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Add the gem to your application's Gemfile:
 
 ```ruby
 gem 'holidays_img'
@@ -18,10 +20,16 @@ $ bundle
 
 ## Usage
 
-Simply use the `holidays_image_tag` helper as you would a standard Rails `image_tag`. To ensure proper loading of images, adhere to the following naming convention:
+Simply use the `holidays_image_tag` helper as you would a standard Rails `image_tag`:
+
+```
+<%= holidays_image_tag 'image.jpg' %>
+```
+
+To ensure proper loading of images, adhere to the following naming convention:
 
 - Have a default image, used for when a day does not fall on a holiday (also acts as a fallback for when a holiday image cannot be found)
-- Name your holiday images in the following format: `original_name_holiday_name`
+- Name your holiday images in the following format: `original_name_holiday_name.ext`
 - Ensure all holiday images are in the same directory
 
 Naming Examples:
