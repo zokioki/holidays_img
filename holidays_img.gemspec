@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Zoran Pesic']
   spec.email         = ['zoran1991@gmail.com']
 
-  spec.summary       = %q{Holiday-aware image_tag wrapper.}
+  spec.summary       = %q{A holiday-aware image_tag wrapper.}
   spec.homepage      = 'https://github.com/zokioki/holidays_img'
   spec.license       = 'MIT'
 
