@@ -28,14 +28,29 @@ Naming Examples:
 
 ```
 image.jpg
-image_good_friday.jpg
 image_christmas_day.jpg
 image_new_year_s_day.jpg
 image_independence_day.jpg
-etc...
+...
 ```
 
 See the holiday gem's [definition files](https://github.com/holidays/definitions) for a list of holidays for any available region.
+
+## Configuration
+
+You can configure options using an initializer:
+
+```ruby
+# app/initializers/holidays_img.rb
+
+HolidaysImg.configure do |config|
+  # Load holidays based on region, defaults to :us
+  config.region    = :ca
+  # Only load images for holidays you specify,
+  # defaults to all holidays observed for specified region
+  config.whitelist = ['Christmas Day']
+end
+```
 
 ## License
 
