@@ -9,7 +9,7 @@ module HolidaysImg
         substring_index = source.rindex('.')
 
         if HolidaysImg.whitelist.empty? || HolidaysImg.whitelist.include?(holiday.name)
-          source.insert(substring_index, "_#{holiday[:name].parameterize('_')}")
+          source.insert(substring_index, "_#{holiday[:name].parameterize(separator: '_')}")
 
           unless File.exists?("#{Rails.root}/app/assets/images/#{source}")
             source = original_source
