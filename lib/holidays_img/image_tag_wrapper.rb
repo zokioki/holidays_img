@@ -1,9 +1,18 @@
 module HolidaysImg
   module ImageTagWrapper
     def holidays_image_tag(source, options={})
-      src = "testing_#{source}_#{HolidaysImg.region}"
+      date = options[:date] || Date.today
+      holiday = Holidays.on(date, HolidaysImg.region).first
 
-      image_tag(src, options)
+      if holiday
+        substring_index = source.rindex('.')
+
+        if HolidaysImg.whitelist.empty? || HolidaysImg.whitelist.include?(holiday.name)
+          source.insert(substring_index, "_#{holiday[:name].parameterize('_')}")
+        end
+      end
+
+      image_tag(source, options)
     end
   end
 end
