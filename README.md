@@ -49,7 +49,7 @@ See the holiday gem's [definition files](https://github.com/holidays/definitions
 You can configure options using an initializer:
 
 ```ruby
-# app/initializers/holidays_img.rb
+# config/initializers/holidays_img.rb
 
 HolidaysImg.configure do |config|
   # Load holidays based on region, defaults to :us
