@@ -2,7 +2,7 @@
 
 [![Gem Version](https://badge.fury.io/rb/holidays_img.svg)](https://badge.fury.io/rb/holidays_img)
 
-This gem is a simple wrapper for Rails's `image_tag` helper. Leveraging the `holidays` gem, it allows you to easily load images based on the holiday occurring on any given date.
+A simple wrapper for Rails's `image_tag` helper. Leveraging the `holidays` gem, it allows you to load images based on the holiday occurring on a given date.
 
 ## Installation
 
