@@ -7,7 +7,6 @@ Gem::Specification.new do |spec|
   spec.name          = 'holidays_img'
   spec.version       = HolidaysImg::VERSION
   spec.authors       = ['Zoran Pesic']
-  spec.email         = ['zoran1991@gmail.com']
 
   spec.summary       = %q{A holiday-aware image_tag wrapper.}
   spec.homepage      = 'https://github.com/zokioki/holidays_img'
