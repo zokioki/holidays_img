@@ -32,7 +32,7 @@ To ensure proper loading of images, adhere to the following naming convention:
 - Name your holiday images in the following format: `original_name_holiday_name.ext`
 - Ensure all holiday images are in the same directory
 
-Naming Examples:
+Naming Example:
 
 ```
 image.jpg
@@ -42,7 +42,7 @@ image_independence_day.jpg
 ...
 ```
 
-See the holiday gem's [definition files](https://github.com/holidays/definitions) for a list of holidays for any available region.
+See the Holidays gem's [definition files](https://github.com/holidays/definitions) for a list of holidays for any available region.
 
 ## Configuration
 
@@ -54,11 +54,14 @@ You can configure options using an initializer:
 HolidaysImg.configure do |config|
   # Load holidays based on region, defaults to :us
   config.region    = :ca
-  # Only load images for holidays you specify,
-  # defaults to all holidays observed for specified region
-  config.whitelist = ['Christmas Day']
+  # Only load images for holidays you specify
+  config.whitelist = ['Christmas Day', 'Mother\'s Day']
+  # Load custom holidays from file, can also pass array of file paths
+  config.custom_holidays = '/path/to/custom_holidays.yml'
 end
 ```
+
+For info on how to format custom holiday definitions, see the Holidays gem's [definition syntax documentation](https://github.com/holidays/definitions/blob/master/SYNTAX.md).
 
 ## License
 

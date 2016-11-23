@@ -7,5 +7,6 @@ module HolidaysImg
   extend Configuration
 
   define_setting :region, :us
-  define_setting :whitelist, []
+  define_setting :whitelist
+  define_setting :custom_holidays
 end
